@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import BannersList from "./components/BannersList";
 import "swiper/css/bundle";
+import { ProductsList } from "./components/ProductsList";
 
 const bannersList = [
   {
@@ -20,6 +21,11 @@ function App() {
     <>
       <Header />
       <BannersList bannersListData={bannersList} />
+      <ProductsList
+        query={{
+          url: "https://corebiz-test-server.onrender.com/api/v1/products",
+        }}
+      />
     </>
   );
 }

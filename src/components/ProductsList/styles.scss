@@ -1,0 +1,5 @@
+.product-list {
+    &__container {
+        @include container;
+    }
+}
