@@ -7,6 +7,7 @@ export default function Image({
   loading,
   alt,
   src,
+  className,
 }: ImageProps) {
   return (
     <img
@@ -16,6 +17,7 @@ export default function Image({
       fetchPriority={fetchPriority}
       loading={loading}
       alt={alt}
+      className={className}
     />
   );
 }

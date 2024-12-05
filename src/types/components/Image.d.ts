@@ -8,4 +8,5 @@ export type ImageProps = {
   loading: LOADING_OPTIONS;
   src: string;
   alt: string;
+  className?: string;
 };

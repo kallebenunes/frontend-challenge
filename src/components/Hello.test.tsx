@@ -1,5 +1,3 @@
-/* eslint-disable */
-//@ts-ignore
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import Hello from "./Hello";
