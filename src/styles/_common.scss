@@ -1,0 +1,6 @@
+@use './normalize';
+
+@mixin container {
+    max-width: 1248px;
+    margin: 0 auto;
+}
