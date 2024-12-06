@@ -5,6 +5,7 @@ import searchProducts from "../../api/searchProducts";
 import { Product } from "../../types/components/product";
 import Image from "../Image";
 import "./styles.scss";
+import ProductPrice from "../ProductPrice";
 
 type ProductListProps = {
   query: {
@@ -47,7 +48,13 @@ export function ProductsList({ query }: ProductListProps) {
                 </div>
                 <div className="product__card-summary">
                   <h2 className="product__card-name">{product.productName}</h2>
-                  <span>{product.price}</span>
+                  <ProductPrice
+                    priceDefinitions={{
+                      price: product.price,
+                      listPrice: product.listPrice,
+                      installments: product.installments,
+                    }}
+                  />
                   <button
                     data-product-id={product.productId}
                     className="product__add-to-car"
