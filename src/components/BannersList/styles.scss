@@ -1,0 +1,6 @@
+.banners {
+    &__container {
+        @include container;
+        padding: 0 1rem;
+    }
+}

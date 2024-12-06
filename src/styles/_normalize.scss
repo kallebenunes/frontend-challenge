@@ -8,6 +8,8 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+
+
 html {
     line-height: 1.15;
     /* 1 */
@@ -24,6 +26,7 @@ html {
 
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 /**
@@ -257,7 +260,7 @@ fieldset {
    */
 
 legend {
-    box-sizing: border-box;
+
     /* 1 */
     color: inherit;
     /* 2 */
