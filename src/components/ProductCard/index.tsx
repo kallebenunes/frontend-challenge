@@ -1,4 +1,5 @@
 import { Product } from "../../types/components/product";
+import AddToCart from "../AddToCart";
 import Image from "../Image";
 import ProductPrice from "../ProductPrice";
 import "./styles.scss";
@@ -30,12 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             installments: product.installments,
           }}
         />
-        <button
-          data-product-id={product.productId}
-          className="product__add-to-car"
-        >
-          Comprar
-        </button>
+        <AddToCart productId={product.productId} />
       </div>
     </li>
   );

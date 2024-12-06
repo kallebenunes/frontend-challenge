@@ -3,4 +3,9 @@
         @include container;
         padding: 1rem 0;
     }
+
+    .swiper-pagination-bullets {
+        position: relative;
+        bottom: 0px;
+    }
 }
