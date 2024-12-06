@@ -1,0 +1,12 @@
+.search {
+    &__bar {
+        border: 0;
+        border-bottom: 2px solid #7A7A7A;
+        padding: .5rem 0;
+        outline: none;
+
+        &::placeholder {
+            color: #7A7A7A;
+        }
+    }
+}
