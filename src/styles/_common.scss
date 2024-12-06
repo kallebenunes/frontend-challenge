@@ -1,5 +1,9 @@
 @use './normalize';
 
+body {
+    font-family: "Nunito", sans-serif;
+}
+
 @mixin container {
     max-width: 1248px;
     margin: 0 auto;

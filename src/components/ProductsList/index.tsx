@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import searchProducts from "../../api/searchProducts";
 import { Product } from "../../types/components/product";
-import Image from "../Image";
+import searchProducts from "../../api/searchProducts";
+import ProductCard from "../ProductCard";
+
 import "./styles.scss";
-import ProductPrice from "../ProductPrice";
 
 type ProductListProps = {
   query: {
@@ -34,35 +34,7 @@ export function ProductsList({ query }: ProductListProps) {
         >
           {productListData.map((product) => (
             <SwiperSlide key={product.productId}>
-              <li className="product__card">
-                <div className="product__card-stack">
-                  <Image
-                    width={300}
-                    height={300}
-                    loading="lazy"
-                    alt={product.productName}
-                    src={product.imageUrl}
-                    className="product__card-image"
-                    fetchPriority="auto"
-                  />
-                </div>
-                <div className="product__card-summary">
-                  <h2 className="product__card-name">{product.productName}</h2>
-                  <ProductPrice
-                    priceDefinitions={{
-                      price: product.price,
-                      listPrice: product.listPrice,
-                      installments: product.installments,
-                    }}
-                  />
-                  <button
-                    data-product-id={product.productId}
-                    className="product__add-to-car"
-                  >
-                    Comprar
-                  </button>
-                </div>
-              </li>
+              <ProductCard product={product} />
             </SwiperSlide>
           ))}
         </Swiper>

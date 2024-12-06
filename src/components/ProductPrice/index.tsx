@@ -1,5 +1,6 @@
 import { Installment } from "../../types/components/product";
 import { formatPrice } from "../../utils/formatPrice";
+import "./styles.scss";
 
 type ProductPriceProps = {
   priceDefinitions: {
@@ -13,18 +14,22 @@ export default function ProductPrice({
 }: ProductPriceProps) {
   return (
     <div className="product__price">
-      <span className="product__price-selling">{formatPrice(price)}</span>
       {listPrice && (
-        <span className="product__price-list">{formatPrice(listPrice)}</span>
+        <span className="product__price-list">
+          {" "}
+          de {formatPrice(listPrice)}
+        </span>
       )}
+      <span className="product__price-selling">por {formatPrice(price)}</span>
       {installments.length > 0 && (
-        <div className="prodcut__installments">
+        <div className="product__price-installments">
           ou em
-          <span className="prodcut__installments-quantity">
+          <span className="product__price-installments-quantity">
+            {" "}
             {installments[0].quantity}
           </span>{" "}
           de{" "}
-          <span className="prodcut__installments-value">
+          <span className="product__price-installments-value">
             {formatPrice(installments[0].value)}
           </span>
         </div>
