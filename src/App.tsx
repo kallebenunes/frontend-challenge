@@ -2,6 +2,8 @@ import Header from "./components/Header";
 import BannersList from "./components/BannersList";
 import "swiper/css/bundle";
 import { ProductsList } from "./components/ProductsList";
+import CartProvider from "./contexts/CartContex";
+import Minicart from "./components/Minicart";
 
 const bannersList = [
   {
@@ -18,7 +20,8 @@ const bannersList = [
 
 function App() {
   return (
-    <>
+    <CartProvider>
+      {/* <Minicart /> */}
       <Header />
       <BannersList bannersListData={bannersList} />
       <ProductsList
@@ -26,7 +29,7 @@ function App() {
           url: "https://corebiz-test-server.onrender.com/api/v1/products",
         }}
       />
-    </>
+    </CartProvider>
   );
 }
 

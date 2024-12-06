@@ -31,7 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             installments: product.installments,
           }}
         />
-        <AddToCart productId={product.productId} />
+        <AddToCart product={product} />
       </div>
     </li>
   );
